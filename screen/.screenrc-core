@@ -1,0 +1,25 @@
+term xterm-256color
+
+# no startup message
+startup_message off
+
+# auto detach on(default)
+autodetach on
+
+# change scrollback size 
+defscrollback 10000
+
+verbose on
+
+setenv LANG ja_JP.UTF-8
+shell -$SHELL 
+
+hardstatus string "%?%h%:%t (screen #%n on %H)%?"
+caption always "%{=r dd}%-Lw%40L>%?%F%{=b dR}%:[%? %n%f %t %?%F%{-}%:]%?%+Lw %?%F%-020=%Y/%m/%d %02c:%s %:%=%?"
+sorendition "+rb .G"
+
+# Key
+escape ^Tt
+bind w windowlist -b
+zombie kr
+
